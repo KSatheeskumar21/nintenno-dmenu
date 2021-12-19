@@ -5,7 +5,7 @@
 
 # Maintainer: Your Name <k.sath214@gmail.com>
 pkgname=nintenno-dmenu
-pkgver=5.0.r4.df4c97f
+pkgver=5.0.r5.c5e25b7
 pkgrel=1
 pkgdesc="My Personal dmenu build at https://github.com/KSatheeskumar21/nintenno-dmenu"
 arch=(x86_64)
@@ -29,7 +29,7 @@ md5sums=('SKIP')
 validpgpkeys=()
 
 prepare() {
-	cd "${_pkgname}"
+	cd "$pkgname"
 	printf "5.0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
@@ -42,7 +42,8 @@ package() {
 	cd nintenno-dmenu
 	mkdir -p ${pkgdir}/opt/${pkgname}
 	cp -rf * ${pkgdir}/opt/${pkgname}
-	sudo make PREFIX=/usr DESTIR="$pkgdir" install
+	# sudo make PREFIX=/usr DESTIR="$pkgdir" install
+	sudo make install
 	install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/nintenno-dmenu/LICENSE"
 	install -Dm644 README "${pkgdir}/usr/share/doc/nintenno-dmenu/README"
 }
