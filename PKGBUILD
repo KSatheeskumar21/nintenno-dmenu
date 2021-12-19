@@ -5,7 +5,7 @@
 
 # Maintainer: Your Name <k.sath214@gmail.com>
 pkgname=nintenno-dmenu
-pkgver=5.0.r6.cffee2c
+pkgver=5.0.r7.3a59c9b
 pkgrel=1
 pkgdesc="My Personal dmenu build at https://github.com/KSatheeskumar21/nintenno-dmenu"
 arch=(x86_64)
@@ -28,8 +28,8 @@ noextract=()
 md5sums=('SKIP')
 validpgpkeys=()
 
-prepare() {
-	cd "$pkgname"
+pkgver() {
+	cd "${_pkgname}"
 	printf "5.0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
