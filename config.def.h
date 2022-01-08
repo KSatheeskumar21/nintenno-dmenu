@@ -36,7 +36,7 @@ static const unsigned int alphas[][3]      = {
  * 11. doom-horizon.h
  * 12. doom-city-lights.h
  */
-#include "colors/doom-one.h"
+#include "colors/tokyo-night.h"
 
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 0;
