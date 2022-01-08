@@ -5,7 +5,7 @@
 
 # Maintainer: Your Name <k.sath214@gmail.com>
 pkgname=nintenno-dmenu
-pkgver=5.0.r9.aa3e58c
+pkgver=5.0.r12.57b2534
 pkgrel=1
 pkgdesc="My Personal dmenu build at https://github.com/KSatheeskumar21/nintenno-dmenu"
 arch=(x86_64)
